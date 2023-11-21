@@ -5,19 +5,16 @@ import PackageDescription
 
 let package = Package(
     name: "BsfMatrix",
+    //platforms: [.iOS(.v16), .iOS(.v17), .macOS(.v14)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "BsfMatrix",
             targets: ["BsfMatrix"]),
     ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "BsfMatrix"),
-        .testTarget(
-            name: "BsfMatrixTests",
-            dependencies: ["BsfMatrix"]),
+            name: "BsfMatrix",
+            dependencies: [])
     ]
 )
